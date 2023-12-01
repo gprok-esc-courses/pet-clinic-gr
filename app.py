@@ -1,6 +1,6 @@
 import csv
 from menus import manager_menu, secretary_menu, veterinary_menu
-from secretary import add_pet
+from secretary import add_pet, add_appointment
 
 def find_user_role(username, password):
     """
@@ -31,6 +31,8 @@ while True:
         choice = secretary_menu()
         if choice == '1':
             add_pet()
+        elif choice == '2':
+            add_appointment()
     elif role == 'veterinary':
         choice = veterinary_menu() 
     else:

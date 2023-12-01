@@ -15,3 +15,9 @@ def add_pet():
                ',' + breed + ',' + year + '\n')
     file.close()
 
+def add_appointment():
+    print("OK")
+
+
+if __name__ == '__main__':
+    add_appointment()
