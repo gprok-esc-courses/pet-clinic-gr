@@ -1,4 +1,5 @@
 import csv
+from menus import manager_menu, secretary_menu, veterinary_menu
 
 def find_user_role(username, password):
     """
@@ -21,12 +22,17 @@ password = input("Give password: ")
 
 role = find_user_role(username, password)
 
-if role == 'manager':
-    print("<< MANAGER MENU >>")
-elif role == 'secretary':
-    print("<< SECRETARY MENU >>")
-elif role == 'veterinary':
-    print("<< VETERINARY MENU >>")   
-else:
-    print("Invalid role or user")
+while True:
+    if role == 'manager':
+        choice = manager_menu()
+        if choice == '1':
+            add_pet()
+    elif role == 'secretary':
+        choice = secretary_menu()
+    elif role == 'veterinary':
+        choice = veterinary_menu() 
+    else:
+        print("Invalid role or user")
+    if choice == '0':
+        break
 
